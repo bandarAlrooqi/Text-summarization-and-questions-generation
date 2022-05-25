@@ -11,12 +11,16 @@ namespace TSAQG
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
-
+        protected void clear()
+        {
+hr.InnerHtml = "";
+            questions.InnerHtml = "";
+        }
         protected void processB_Click(object sender, EventArgs e)
         {
-            questions.InnerHtml = "";
+            clear();
              if(orignalT.Text.Split(' ').Length < 200)
             {
                 hr.InnerHtml = "<div class='alert alert-danger' role='alert'>Orignal text must be 200 token or more.</div>";
